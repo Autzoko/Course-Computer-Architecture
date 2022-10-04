@@ -12,7 +12,7 @@ bash ./run.sh
 ```
 
 #### Debug with gbd
-Add parameter "-g" while compiling the source file. Then use instruction
+Add parameter "-g" while compiling the source file. Then use command
 ```shell
 gbd obj.o
 ```
@@ -27,7 +27,7 @@ Within the gdb mode:
 ### Analysis
 Instructions that have a prefix of "." are not the content of
 original codes, these instructions are called the assembler instrctions which is for guiding the assembler to process codes.
-Here I use instruction
+Here I use command
 ```shell
 objdump -d fibonacci.o
 ```
@@ -43,3 +43,16 @@ Some registers' functions in x86_64 are as follow:
 - %rsp: pointing to stack top.
 - %rbp: pointing to stack bottom.
 - %rdi, %rsi, %rdx, %rcx, %r8, %r9: parameters of functions.
+
+#### Detailed analysis of assembly codes
+```assembly
+endbr64
+```
+This instruction is for protecting program not to be attacked by setting virtual table and controll the administrator permission in Intel CET structure. It could make sure that each jump between the different branchs is secured, which means, under Intel CET structure, program can only jump to a subprogram that begin with *endbr32/64*, otherwise with be recognized as *nop*.
+
+
+#### Relative referrence links
+- https://en.wikipedia.org/wiki/Control-flow_integrity
+- https://blog.csdn.net/zhbt1234/article/details/54019620
+- https://blog.csdn.net/m0_47096428/article/details/116721465
+- https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html
