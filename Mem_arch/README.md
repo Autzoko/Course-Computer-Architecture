@@ -7,8 +7,9 @@
 - (optional) Cross compile the Fibonacci.c for LoongArch64 targets, analyze the assembly code of Fibonacci.c in LoongArch64.
 
 #### Run file
+Under main content: 
 ```shell
-bash ./run.sh
+bash ./Mem_arch/run.sh
 ```
 
 #### Debug with gbd
