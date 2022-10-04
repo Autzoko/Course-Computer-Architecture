@@ -10,3 +10,12 @@
 ```shell
 bash ./run.sh
 ```
+
+### Analysis
+Instructions that have a prefix of "." are not the content of
+original codes, these instructions are called the assembler instrctions which is for guiding the assembler to process codes.
+Here I use instruction
+```shell
+objdump -d fibonacci.o
+```
+to check the disassembly result of the executive file "fibonacci.o" 
