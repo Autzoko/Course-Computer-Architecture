@@ -11,6 +11,19 @@
 bash ./run.sh
 ```
 
+#### Debug with gbd
+Add parameter "-g" while compiling the source file. Then use instruction
+```shell
+gbd obj.o
+```
+to initiate gdb mode.
+Within the gdb mode:
+- use command *run* to run whole file.
+- use command *next* to run file step by step.
+- use command *break src.c:linenum* to set breakpoint at line *%linenum* in file *%src.c*
+- use command *print var* to display the value of certain variable *%var*.
+
+
 ### Analysis
 Instructions that have a prefix of "." are not the content of
 original codes, these instructions are called the assembler instrctions which is for guiding the assembler to process codes.
@@ -30,16 +43,3 @@ Some registers' functions in x86_64 are as follow:
 - %rsp: pointing to stack top.
 - %rbp: pointing to stack bottom.
 - %rdi, %rsi, %rdx, %rcx, %r8, %r9: parameters of functions.
-
-
-### Debug with gbd
-Add parameter "-g" while compiling the source file. The use instrution
-```shell
-gbd obj.o
-```
-to initiat gdb mode.
-Within the gdb mode:
-- use command *run* to run whole file.
-- use command *next* to run file step by step.
-- use command *break src.c:linenum* to set breakpoint at line *%linenum* in file *%src.c*
-- use command *print var* to display the value of certain variable *%var*.
