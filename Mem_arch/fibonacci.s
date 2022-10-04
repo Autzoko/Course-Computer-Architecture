@@ -2,7 +2,7 @@
 	.text
 	.section	.rodata
 .LC0:
-	.string	"%d's memory position is: %x.\n"
+	.string	"%d's memory address is: %x.\n"
 	.text
 	.globl	main
 	.type	main, @function

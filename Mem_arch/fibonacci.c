@@ -12,7 +12,7 @@ int main()
     for(i = 0; i < 10; i++)
     {
         int a = &num[i];
-        printf("%d's memory position is: %x.\n", num[i], a);
+        printf("%d's memory address is: %x.\n", num[i], a);
     }
     return 0;
 }
