@@ -18,10 +18,10 @@ gbd obj.o
 ```
 to initiate gdb mode.
 Within the gdb mode:
-- use command *run* to run whole file.
-- use command *next* to run file step by step.
-- use command *break src.c:linenum* to set breakpoint at line *%linenum* in file *%src.c*
-- use command *print var* to display the value of certain variable *%var*.
+- use command ***run*** to run whole file.
+- use command ***next*** to run file step by step.
+- use command ***break src.c:linenum*** to set breakpoint at line ***%linenum*** in file ***%src.c***
+- use command ***print var*** to display the value of certain variable ***%var***.
 
 
 ### Analysis
