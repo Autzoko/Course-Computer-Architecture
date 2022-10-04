@@ -2,7 +2,7 @@
 
 int main()
 {
-    int i, n, num[10];
+    int i, num[10];
     num[0] = 1;
     num[1] = 1;
     for(i = 2; i < 10; i++)
@@ -11,9 +11,8 @@ int main()
     }
     for(i = 0; i < 10; i++)
     {
-        //printf("%d,", num[i]);
         int a = &num[i];
-        printf("%x,", a);
+        printf("%d's memory position is: %x.\n", num[i], a);
     }
     return 0;
 }
