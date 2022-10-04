@@ -26,7 +26,20 @@ to check the disassembly result of the executive file "fibonacci.o"
 
 The disassembly results of the main section could be recognized in the section *main* in file *dis_d.log*. Address from 0x1169 to 0x1229.
 Some registers' functions in x86_64 are as follow:
-- %rax: return value of function
-- %rsp: pointing to stack top
-- %rbp: pointing to stack bottom
-- %rdi, %rsi, %rdx, %rcx, %r8, %r9: parameters of functions
+- %rax: return value of function.
+- %rsp: pointing to stack top.
+- %rbp: pointing to stack bottom.
+- %rdi, %rsi, %rdx, %rcx, %r8, %r9: parameters of functions.
+
+
+### Debug with gbd
+Add parameter "-g" while compiling the source file. The use instrution
+```shell
+gbd obj.o
+```
+to initiat gdb mode.
+Within the gdb mode:
+- use command *run* to run whole file.
+- use command *next* to run file step by step.
+- use command *break src.c:linenum* to set breakpoint at line *%linenum* in file *%src.c*
+- use command *print var* to display the value of certain variable *%var*.
