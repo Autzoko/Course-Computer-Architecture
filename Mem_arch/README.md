@@ -50,6 +50,11 @@ Some registers' functions in x86_64 are as follow:
 endbr64
 ```
 This instruction is for protecting program not to be attacked by setting virtual table and controll the administrator permission in Intel CET structure. It could make sure that each jump between the different branchs is secured, which means, under Intel CET structure, program can only jump to a subprogram that begin with *endbr32/64*, otherwise with be recognized as *nop*.
+```assembly
+push    %rbq
+mov     %rsp, %rbp
+```
+Push the stack-bottom-pointer into stack and let the stack-top-pointer point to the bottom. This action is for initializing a stack.
 
 
 #### Relative referrence links
