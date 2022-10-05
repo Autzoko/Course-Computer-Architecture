@@ -10,7 +10,7 @@
 #### Run file
 Under main directory: 
 ```shell
-bash ./Mem_arch/run.sh
+bash ./mem_arch/run.sh
 ```
 
 #### Debug with gbd
@@ -60,7 +60,8 @@ mov     %rsp, %rbp
 Push the stack-bottom-pointer into stack and let the stack-top-pointer point to the bottom. This action is for initializing a stack.
 
 #### Question 2
-
+Using gdb debug model to check address of variable, for example:
+![GBD Example](./data/img/md_img_1.png)
 
 
 ### Relative reference links
