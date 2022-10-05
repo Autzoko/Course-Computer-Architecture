@@ -58,7 +58,7 @@ mov     %rsp, %rbp
 Push the stack-bottom-pointer into stack and let the stack-top-pointer point to the bottom. This action is for initializing a stack.
 
 
-#### Relative referrence links
+#### Relative reference links
 - https://en.wikipedia.org/wiki/Control-flow_integrity
 - https://blog.csdn.net/zhbt1234/article/details/54019620
 - https://blog.csdn.net/m0_47096428/article/details/116721465
