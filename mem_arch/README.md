@@ -66,7 +66,7 @@ Using gdb debug model to check address of variable, for example:
 ![GBD Example](./data/img/md_img_1.png "Example figure 1")
 
 </center>
-
+This example figure shows the address and value of variable *i* and variable *num[i]*. From the results, the address variable *i* is **0x7fffffffe8**, the address of array *num* is from **0xd2a66180** to **0xd2a661a4**, each element occupies 4 bytes.
 
 
 ### Relative reference links
