@@ -20,9 +20,10 @@ gbd obj.o
 to initiate gdb mode.
 Within the gdb mode:
 - use command ***run*** to run whole file.
-- use command ***next*** to run file step by step.
+- use command ***next*** to run file step by step. #abbr: n
 - use command ***break src.c:linenum*** to set breakpoint at line ***%linenum*** in file ***%src.c***
 - use command ***print var*** to display the value of certain variable ***%var***.
+- use command ***examine &var*** to check value in certain address of ***%var***. #abbr: x; parameters: /nfu.
 
 
 ### Analysis
@@ -62,3 +63,4 @@ Push the stack-bottom-pointer into stack and let the stack-top-pointer point to 
 - https://blog.csdn.net/zhbt1234/article/details/54019620
 - https://blog.csdn.net/m0_47096428/article/details/116721465
 - https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html
+- https://blog.csdn.net/xiaozhiwise/article/details/122732433
