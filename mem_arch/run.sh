@@ -1,5 +1,5 @@
 echo "RUNNING FILE FIBONACCI.C"
-cd Mem_arch
+cd mem_arch
 echo "Generating assembly file..."
 gcc fibonacci.c -S -w -o fibonacci.s
 echo "Generating executive file..."
@@ -12,4 +12,4 @@ objdump -h fibonacci.o | tee dis_h.log
 cd ../
 
 echo "DEBUG..."
-gdb ./Mem_arch/fibonacci_debug.o
+gdb ./mem_arch/fibonacci_debug.o
