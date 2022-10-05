@@ -61,7 +61,10 @@ Push the stack-bottom-pointer into stack and let the stack-top-pointer point to 
 
 #### Question 2
 Using gdb debug model to check address of variable, for example:
+<center>
 ![GBD Example](./data/img/md_img_1.png)
+</center>
+
 
 
 ### Relative reference links
