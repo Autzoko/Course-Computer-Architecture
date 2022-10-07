@@ -2,7 +2,21 @@
 
 ### Cross Compile
 
-Coming soon...
+To install RISC-V cross compile toolchain in Linux x86_64, please run
+```shell
+bash tools_chain_install.sh
+```
+After the environment is installed, use command
+```shell
+riscv64-unknown-elf-gcc
+```
+to compile c language file into RISC-V binary file or assembly file.
+Or could directly use command
+```shell
+bash run.sh
+```
+to generate related files.
+The cross-compiler generated assembly file is **riscv_fibonacci.s**.
 
 ### Run Online
 Online Assembler link: www.kvakil.me/venus/. Copy the assembly code from **fibonacci.s** under this directory to the website then
