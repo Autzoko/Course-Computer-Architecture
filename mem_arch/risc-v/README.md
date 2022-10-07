@@ -17,6 +17,11 @@ bash run.sh
 ```
 to generate related files.
 The cross-compiler generated assembly file is **riscv_fibonacci.s**.
+Here use qemu to run RISC-V binary file. Use command
+```shell
+qemu-riscv64 riscv_fibonacci.o
+```
+to complete. The running output is recorded in file **riscv_run_output.log**.
 
 ### Run Online
 Online Assembler link: www.kvakil.me/venus/. Copy the assembly code from **fibonacci.s** under this directory to the website then

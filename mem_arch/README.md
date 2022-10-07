@@ -74,7 +74,7 @@ This example figure shows the address and value of variable *i* and variable *nu
 Please read the **/risc-v/README.md** file to get detailed information.
 
 
-### Relative reference links
+### Related reference links
 - https://en.wikipedia.org/wiki/Control-flow_integrity
 - https://blog.csdn.net/zhbt1234/article/details/54019620
 - https://blog.csdn.net/m0_47096428/article/details/116721465
