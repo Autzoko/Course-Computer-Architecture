@@ -52,7 +52,7 @@ Some registers' functions in x86_64 are as follow:
 ```assembly
 endbr64
 ```
-This instruction is for protecting program not to be attacked by setting virtual table and controll the administrator permission in Intel CET structure. It could make sure that each jump between the different branchs is secured, which means, under Intel CET structure, program can only jump to a subprogram that begin with *endbr32/64*, otherwise with be recognized as *nop*.
+This instruction is for protecting program not to be attacked by setting virtual table and controll the administrator permission in Intel CET structure. It could make sure that each jump between the different branchs is secured, which means, under Intel CET structure, program can only jump to a subprogram that begin with *endbr32/64*, otherwise will be recognized as *nop*.
 ```assembly
 push    %rbq
 mov     %rsp, %rbp
@@ -71,7 +71,7 @@ This example figure shows the address and value of variable *i* and variable *nu
 
 
 #### Question 3
-Install risc-v cross compile tools chain. Refer to *risc-v/tools_chain_install.sh* for detailed installation steps.
+Please read the **/risc-v/README.md** file to get detailed information.
 
 
 ### Relative reference links
