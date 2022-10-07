@@ -1,5 +1,7 @@
 echo "Installing RISC-V cross compile tools chain"
-cd /home/
+USER_NAME=$(getent passwd `who` | head -n 1 | cut -d : -f 1)
+
+cd /home/$USER_NAME
 mkdir riscv
 cd riscv
 sudo git clone https://github.com/riscv/riscv-tools.git
