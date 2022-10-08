@@ -40,3 +40,9 @@ To run the binary file with qemu, use command
 qemu-mipsel mips_fibonacci.o
 ```
 The running result is recorded in file **output.log**.
+
+Use command
+```
+bash run.sh
+```
+to run them all.
