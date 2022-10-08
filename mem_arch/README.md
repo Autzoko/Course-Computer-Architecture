@@ -1,5 +1,5 @@
-## Computer Architecture Lab
-### Assignment Requirements
+# Computer Architecture Lab
+## Assignment Requirements
 - Write a Fibonacci.c storing the first ten sequence numbers. Run the Fibonacci program in your computer, analyze the assembly code for the Fibonacci.c.
 - Observe the memory areas in bytes for the Fibonacci numbers given by the computer where the Fibonacci program running. Analyze what you have seen.
 - Cross compile the Fibonacci.c for RISC-V targets, or write the assembly code of Fibonacci.c in RISC-V assembly language, and run it in RISC-V online simulator (www.kvakil.me/venus/). Observe the memory areas in bytes for the Fibonacci numbers given by the RISC-V simulator.
@@ -7,13 +7,13 @@
 - write the assembly code of Fibonacci.c in MIPS assembly language, and run it in WinMIPS64 simulator. Observe the memory areas in bytes for the Fibonacci numbers given by the WinMIPS simulator.
 - (optional) Cross compile the Fibonacci.c for LoongArch64 targets, analyze the assembly code of Fibonacci.c in LoongArch64.
 
-#### Run file
+### Run file
 Under main directory: 
 ```shell
 bash ./mem_arch/run.sh
 ```
 
-#### Debug with gbd
+### Debug with gbd
 Add parameter "-g" while compiling the source file. Then use command
 ```shell
 gbd obj.o
@@ -27,8 +27,8 @@ Within the gdb mode:
 - use command ***examine &var*** to check value in certain address of ***%var***. #abbr: x; parameters: /nfu.
 
 
-### Analysis
-#### Question 1
+## Analysis
+### Question 1
 Instructions that have a prefix of "." are not the content of
 original codes, these instructions are called the assembler instrctions which is for guiding the assembler to process codes.
 Here I use command
@@ -48,7 +48,7 @@ Some registers' functions in x86_64 are as follow:
 - %rbp: pointing to stack bottom.
 - %rdi, %rsi, %rdx, %rcx, %r8, %r9: parameters of functions.
 
-##### Detailed analysis of assembly codes
+#### Detailed analysis of assembly codes
 ```assembly
 endbr64
 ```
@@ -59,7 +59,7 @@ mov     %rsp, %rbp
 ```
 Push the stack-bottom-pointer into stack and let the stack-top-pointer point to the bottom. This action is for initializing a stack.
 
-#### Question 2
+### Question 2
 Using gdb debug model to check address of variable, for example:
 <center>
 
@@ -70,11 +70,16 @@ Using gdb debug model to check address of variable, for example:
 This example figure shows the address and value of variable *i* and variable *num[i]*. From the results, the address variable *i* is **0x7fffffffe8**, the address of array *num* is from **0xd2a66180** to **0xd2a661a4**, each element occupies 4 bytes. The detailed address could be seen in ***output.log***. And due to the memory occupation is different each time the program running, so their addresses are also distinct.
 
 
-#### Question 3
+### Question 3
 Please read the **/risc-v/README.md** file to get detailed information.
 
+### Question 4
+Please read the **/mips/README.md** file to get detailed information.
 
-### Related reference links
+### Question 5
+
+
+## Related reference links
 - https://en.wikipedia.org/wiki/Control-flow_integrity
 - https://blog.csdn.net/zhbt1234/article/details/54019620
 - https://blog.csdn.net/m0_47096428/article/details/116721465
