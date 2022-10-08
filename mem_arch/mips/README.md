@@ -34,4 +34,4 @@ Use command
 ```shell
 mipsel-linux-gcc ../fibonacci.c -S -o mips_fibonacci.s
 ```
-to generate MIPS assembly codes.
+to generate MIPS assembly codes. The generated MIPS assembly codes could be read in file **mips_fibonacci.s**.
