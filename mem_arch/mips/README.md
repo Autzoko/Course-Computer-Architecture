@@ -22,4 +22,16 @@ The Mars simulator interface and running results will be shown below:
 
 ### Cross Compile
 #### Problems with Installing cross compiler
+Process always be killed during the make file step. I refered to the similar problem about installing LLVM on the Internet, then it can be compiled and passed after expanding the memory allocated to my virtual machine.
 
+#### Compile
+Use command
+```shell
+mipsel-linux-gcc ../fibonacci.c -o mips_fibonacci.o
+```
+to generate executive file of MIPS.
+Use command
+```shell
+mipsel-linux-gcc ../fibonacci.c -S -o mips_fibonacci.s
+```
+to generate MIPS assembly codes.
