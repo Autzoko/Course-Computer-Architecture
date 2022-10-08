@@ -27,7 +27,7 @@ Process always be killed during the make file step. I refered to the similar pro
 #### Compile
 Use command
 ```shell
-mipsel-linux-gcc ../fibonacci.c -o mips_fibonacci.o
+mipsel-linux-gcc ../fibonacci.c -static -o mips_fibonacci.o
 ```
 to generate executive file of MIPS.
 Use command
@@ -35,3 +35,8 @@ Use command
 mipsel-linux-gcc ../fibonacci.c -S -o mips_fibonacci.s
 ```
 to generate MIPS assembly codes. The generated MIPS assembly codes could be read in file **mips_fibonacci.s**.
+To run the binary file with qemu, use command
+```shell
+qemu-mipsel mips_fibonacci.o
+```
+The running result is recorded in file "output.log".
