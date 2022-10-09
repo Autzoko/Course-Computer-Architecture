@@ -1,4 +1,4 @@
-# Computer Architecture Lab
+# Computer Architecture Lab: Comparison of Instruction Sets
 ## Assignment Requirements
 - Write a Fibonacci.c storing the first ten sequence numbers. Run the Fibonacci program in your computer, analyze the assembly code for the Fibonacci.c.
 - Observe the memory areas in bytes for the Fibonacci numbers given by the computer where the Fibonacci program running. Analyze what you have seen.
