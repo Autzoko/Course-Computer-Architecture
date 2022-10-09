@@ -29,9 +29,7 @@ Within the gdb mode:
 
 ## Analysis
 ### Question 1
-Instructions that have a prefix of "." are not the content of
-original codes, these instructions are called the assembler instrctions which is for guiding the assembler to process codes.
-Here I use command
+Instructions that have a prefix of "." are not the content of original codes, these instructions are called the assembler instrctions which is for guiding the assembler to process codes. Here I use command
 ```shell
 objdump -d fibonacci.o
 ```
