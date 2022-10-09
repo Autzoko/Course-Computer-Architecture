@@ -28,6 +28,7 @@ Within the gdb mode:
 
 
 ## Analysis
+! **Question 1 ~ 4 are finished on Linux platform, Question 5 are finished on Windows 11 platform.**
 ### Question 1
 Instructions that have a prefix of "." are not the content of original codes, these instructions are called the assembler instrctions which is for guiding the assembler to process codes. Here I use command
 ```shell
