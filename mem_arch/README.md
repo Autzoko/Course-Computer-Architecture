@@ -1,4 +1,4 @@
-# Computer Architecture Lab
+# Computer Architecture Lab: Comparison of Instruction Sets
 ## Assignment Requirements
 - Write a Fibonacci.c storing the first ten sequence numbers. Run the Fibonacci program in your computer, analyze the assembly code for the Fibonacci.c.
 - Observe the memory areas in bytes for the Fibonacci numbers given by the computer where the Fibonacci program running. Analyze what you have seen.
@@ -28,10 +28,9 @@ Within the gdb mode:
 
 
 ## Analysis
+! **Question 1 ~ 4 are finished on Linux platform, Question 5 is finished on Windows 11 platform.**
 ### Question 1
-Instructions that have a prefix of "." are not the content of
-original codes, these instructions are called the assembler instrctions which is for guiding the assembler to process codes.
-Here I use command
+Instructions that have a prefix of "." are not the content of original codes, these instructions are called the assembler instrctions which is for guiding the assembler to process codes. Here I use command
 ```shell
 objdump -d fibonacci.o
 ```
@@ -77,6 +76,7 @@ Please read the **/risc-v/README.md** file to get detailed information.
 Please read the **/mips/README.md** file to get detailed information.
 
 ### Question 5
+Please read the **/mips/Winmips64/README.md** file to get detailed information.
 
 
 ## Related reference links
@@ -86,3 +86,4 @@ Please read the **/mips/README.md** file to get detailed information.
 - https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html
 - https://blog.csdn.net/xiaozhiwise/article/details/122732433
 - https://blog.csdn.net/qq_40836704/article/details/120391584
+- https://blog.csdn.net/SundayO/article/details/101108385
