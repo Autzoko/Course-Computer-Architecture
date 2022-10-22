@@ -27,4 +27,4 @@ The modified code could be seen in **code.s**.
 
 ![MARS_RESULT](./data/img/MARS_result.png "Result of running assembly code in MARS")
 
-As can be seen in the image above, the data **1** that saved into the memory(data segment) stops at address **0x10010180 + 8**, and it is metioned that the data segment begins at **0x10010000**, hence we can know that there are 99 data **1** have been saved to the memory, which means the *loop* has run 99 times.
+As can be seen in the image above, the data **1** that saved into the memory(data segment) stops at address **0x10010180 + 8**, and it is metioned that the data segment begins at **0x10010000**, hence we can know that there are 99 data **1** have been saved to the memory, which means the *loop* has run 99 times. This is because that the initial value of register **$t3** is **$R2+396**, for 4 bits each data, this means 99 data.
