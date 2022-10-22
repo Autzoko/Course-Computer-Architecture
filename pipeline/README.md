@@ -52,3 +52,5 @@ This table shows the operations amid each instruction.
 |5|sub \$t4,\$t3,\$t2||||||IF|ID|EX|MEM|WB|||
 |6|bnez \$t4,loop|||||||IF|ID|RAW|EX|MEM|WB|
 
+It can be seen from the table that a loop takes 12 clock cycles, and absolutely have **STALL**.
+The first **STALL** happens at instrution **sw \$t1, 0(\$t2)**
