@@ -40,3 +40,15 @@ To run the assembly code on WINMIPS64, the initial value of register **$t2** nee
 The pipeline of **code_winmips.s** that shown in the WinMIPS64 is:
 
 ![WINMIPS_PIPELINE](data/img/Winmips_pipeline.png "Winmips pipeline")
+
+This table shows the operations amid each instruction.
+
+|No.|Instrution|1|2|3|4|5|6|7|8|9|10|11|12|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|1|lw \$t1,0(\$t2)|IF|ID|EX|MEM|WB|||||||
+|2|addi \$t1,\$t1,1||IF|ID|EX|RAW|MEM|WB||||||
+|3|sw \$t1,0(\$t2)|||IF|ID|ST|EX|MEM|WB|||||
+|4|addi \$t2,\$t2,4||||IF|ST|ID|EX|MEM|WB||||
+|5|sub \$t4,\$t3,\$t2||||||IF|ID|EX|MEM|WB|||
+|6|bnez \$t4,loop|||||||IF|ID|RAW|EX|MEM|WB|
+
