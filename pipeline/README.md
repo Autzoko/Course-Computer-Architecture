@@ -16,3 +16,15 @@ Analyze (a) by showing the timing of the first two iterations and calculate the 
 - (a)**Show** the timing of this instruction sequence for the RISC pipeline **without any forwarding or bypassing** hardware but assuming *a register read and a write in the same clock cycle “forwards” through the register file. Assume that the branch is handled by flushing the pipeline.* If all memory references take 1 cycle, **how many** cycles does this loop take to execute?
 - (b)**Show** the timing of this instruction sequence for the RISC pipeline **with normal forwarding and bypassing hardware.** *Assume that the branch is handled by predicting it as not taken.* If all memory references take 1 cycle, **how many** cycles does this loop take to execute?
 - (c)Assume the RISC pipeline with a single-cycle delayed branch and normal forwarding and bypassing hardware. Schedule the instructions in the loop including the branch delay slot. You **may reorder instructions and modify the individual instruction operands**, but do not undertake other loop transformations that change the number or opcode of the instructions in the loop. **Show** a pipeline timing diagram and compute **the number of cycles needed** to execute the entire loop.
+
+## Solutions
+
+To run the assembly code fragment, it is necessary to modify syntax of **lw** and **sw**.
+The data segment in MARS begin at **0x10010000**, to avoid **lw** and **sw** operation out of address range, the initial value of
+register **$t2** need to be set with the value of **0x10010000**.
+
+The modified code could be seen in **code.s**.
+
+![MARS_RESULT](./data/img/MARS_result.png "Result of running assembly code in MARS")
+
+As can be seen in the image above, the data **1** that saved into the memory(data segment) stops at address **0x10010180 + 8**, and it is metioned that the data segment begins at **0x10010000**, hence we can know that there are 99 data **1** have been saved to the memory, which means the *loop* has run 99 times.
