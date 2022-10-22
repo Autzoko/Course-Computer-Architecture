@@ -19,6 +19,8 @@ Analyze (a) by showing the timing of the first two iterations and calculate the 
 
 ## Solutions
 
+### MARS
+
 To run the assembly code fragment, it is necessary to modify syntax of **lw** and **sw**.
 The data segment in MARS begin at **0x10010000**, to avoid **lw** and **sw** operation out of address range, the initial value of
 register **$t2** need to be set with the value of **0x10010000**.
@@ -28,3 +30,13 @@ The modified code could be seen in **code.s**.
 ![MARS_RESULT](./data/img/MARS_result.png "Result of running assembly code in MARS")
 
 As can be seen in the image above, the data **1** that saved into the memory(data segment) stops at address **0x10010180 + 8**, and it is metioned that the data segment begins at **0x10010000**, hence we can know that there are 99 data **1** have been saved to the memory, which means the *loop* has run 99 times. This is because that the initial value of register **$t3** is **$R2+396**, for 4 bits each data, this means 99 data.
+
+### WinMIPS64
+
+To run the assembly code on WINMIPS64, the initial value of register **$t2** need to be set to **0x00**, and instruction **addi** and **sub** need to be modified to **daddi** and **dsub**. The running result is similar to the MARS.
+
+### Pipeline
+
+The pipeline of **code_winmips.s** that shown in the WinMIPS64 is:
+
+![WINMIPS_PIPELINE](data/img/Winmips_pipeline.png "Winmips pipeline")
