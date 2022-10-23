@@ -2,7 +2,7 @@
 test: .word 0
 	.text
 main:
-	addi	$t2, $zero, 0x10010000
+	addi	$t2, $zero, 0x10010000 ;test
 	addi	$t3, $t2, 396
 loop:
     lw      $t1, 0($t2)
