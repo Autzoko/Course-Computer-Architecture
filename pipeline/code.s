@@ -5,7 +5,7 @@ main:
 	addi	$t2, $zero, 0x10010000 ;test
 	addi	$t3, $t2, 396
 loop:
-    lw      $t1, 0($t2)
+    lw      $t1, 0($t2) ;test1
     addi    $t1, $t1, 1
     sw      $t1, 0($t2)
     addi    $t2, $t2, 4
