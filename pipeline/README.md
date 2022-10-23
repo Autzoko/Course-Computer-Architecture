@@ -54,3 +54,6 @@ This table shows the operations amid each instruction.
 
 It can be seen from the table that a loop takes 12 clock cycles, and absolutely have **STALL**.
 The first **STALL** happens at instrution **sw \$t1, 0(\$t2)**
+
+![MARS_CIRCUIT](data/img/MARS_circuit.png "simulation of data path in MARS Mips")
+
