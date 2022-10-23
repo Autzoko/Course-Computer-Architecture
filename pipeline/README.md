@@ -53,4 +53,9 @@ This table shows the operations amid each instruction.
 |6|bnez \$t4,loop|||||||IF|ID|RAW|EX|MEM|WB|
 
 It can be seen from the table that a loop takes 12 clock cycles, and absolutely have **STALL**.
-The first **STALL** happens at instrution **sw \$t1, 0(\$t2)**
+The first **STALL** happens at instrution **sw \$t1, 0(\$t2)**. The operation before this instruction use register $t1 which is also used in *addi* operation, to avoid data conflict on this register, the execution need to start after the last intruction finish its execution. 
+
+Other **STALL** in this loop is for avoiding data conflict in a register either.
+
+![MARS_CIRCUIT](data/img/MARS_circuit.png "simulation of data path in MARS Mips")
+
